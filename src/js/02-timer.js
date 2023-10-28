@@ -104,7 +104,7 @@ function handlerStart() {
     const timerIdInterval = setInterval(() => {
     if (counter <= 1000) {
       clearInterval(timerIdInterval);
-      Notiflix.Report.success('Success', 'Nice job!', 'Ok!');
+      Notiflix.Report.success('Timer is finished', 'Nice job!', 'Done!');
       return;
     } 
         
