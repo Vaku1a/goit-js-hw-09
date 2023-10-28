@@ -5,19 +5,18 @@ const selectors = {
 
 let intervalId;
 
-
 selectors.btnStart.addEventListener("click", handlerStart);
 selectors.btnStop.addEventListener("click", handlerStop);
 
 function handlerStart(evt) {
     evt.currentTarget.disabled = true;
     if (!intervalId) {
-    intervalId = setInterval(changeBgColor, 1000);
+    intervalId = setInterval(getRandomHexColor, 1000);
     }
 };
 
-function changeBgColor() {
-    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+function getRandomHexColor() {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0);
     document.body.style.backgroundColor = "#" + randomColor;
 }
 
