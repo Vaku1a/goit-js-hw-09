@@ -16,8 +16,8 @@ const selectors = {
   timerBox: document.querySelector('.timer'),
 };
 
-// let counter;
-// let markup = {};
+let counter = 0;
+let markup = {};
 
 // selectors.timerBox.style.display = 'flex';
 // selectors.timerBox.style.gap = '20px';
