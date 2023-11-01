@@ -8,9 +8,9 @@ selectors.form.addEventListener('submit', handlerSubmit);
 
 function handlerSubmit(evt) {
   evt.preventDefault();
-  const delay = selectors.form.elements.delay.value;
-  const step = selectors.form.elements.step.value;
-  const amount = selectors.form.elements.amount.value;
+  const delay = Number(selectors.form.elements.delay.value);
+  const step = Number(selectors.form.elements.step.value);
+  const amount = Number(selectors.form.elements.amount.value);
   const promises = [];
 
   if (amount <= 0) {
